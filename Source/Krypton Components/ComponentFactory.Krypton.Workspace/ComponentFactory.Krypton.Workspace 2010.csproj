@@ -100,7 +100,7 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Krypton.ico" />
+    <None Include="Krypton.ico" />
     <None Include="Resources\arrow_up_blue.png" />
     <None Include="Resources\arrow_down_blue.png" />
     <None Include="Resources\add.png" />
@@ -166,6 +166,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>"$(ProjectDir)..\GacUtil.exe" -i "$(TargetPath)" /f</PostBuildEvent>
+    <PostBuildEvent>"GacUtil.exe" -if "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

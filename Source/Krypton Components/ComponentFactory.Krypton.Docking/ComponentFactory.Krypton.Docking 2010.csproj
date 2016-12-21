@@ -155,7 +155,7 @@
     <None Include="StrongKrypton.snk" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Krypton.ico" />
+    <None Include="Krypton.ico" />
     <None Include="Resources\help2.png" />
     <None Include="Resources\delete2.png" />
     <None Include="Resources\check2.png" />
@@ -187,6 +187,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>"$(ProjectDir)..\GacUtil.exe" -i "$(TargetPath)" /f</PostBuildEvent>
+    <PostBuildEvent>"GacUtil.exe" -if "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
 </Project>
